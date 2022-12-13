@@ -22,7 +22,6 @@
 				max-width: 100%;
 				overflow-x: hidden;
 				overflow-y: scroll;
-				width: calc(100vw - 1rem);
 				display: -webkit-flex;
 				display: flex;
 				justify-content: center;
@@ -38,6 +37,9 @@
 				justify-content: center;
 				align-items: center;
 			}
+			h1{
+				margin-top: 6rem;
+			}
 			p,
 			summary, 
 			ol{
@@ -50,19 +52,19 @@
 			}
 			#bonus-1,
 			#bonus-2,
-			#bonus-3,
 			#bonus-4{
 				padding: .25rem;
 				border: 1px solid;
 			}
+			#bonus-3{
+				padding: .25rem;
+			}
 			#bonus-1{
-				font-size: 1.1rem;
 				position: absolute;
 				top: .5rem;
 				left: 1rem;
 			}
 			#bonus-2{
-				font-size: 1.1rem;
 				position: absolute;
 				top: .5rem;
 				right: 1rem;
@@ -70,13 +72,13 @@
 			#pov{
 				text-align: left;
 				line-height: 1.7em;
-				max-width: calc(40vw - 1rem);
+				max-width: 80%
 			}
 			details{
 				border: 1px solid;
 				outline: 2px dotted;
 				margin: 1rem 0;
-				width: calc(33vw - 1rem);
+				width: 75%;
 				height: calc(33vh - 1rem);
 				padding: 1rem;
 				position: relative;
@@ -122,18 +124,20 @@
 			ol{
 				display: inline-block;
 				text-align: left;
+				margin-bottom: 5rem;
 			}
 			li{
 				margin-bottom: .5rem;
 			}
 			#bonus-3{
-				font-size: 1.1rem;
 				position: absolute;
 				bottom: .5rem;
 				left: 1rem;
 			}
+			#bonus-3 a{
+				border: none;
+			}
 			#bonus-4{
-				font-size: 1.1rem;
 				position: absolute;
 				bottom: .5rem;
 				right: 1rem;
@@ -157,7 +161,7 @@
 				<li>Intelligence</li>
 				<li>Thoughtfulness</li>
 			</ol>
-			<p id="bonus-3">Handcoded by AW</p>
+			<p id="bonus-3"><em>handcoded by aw</em></p>
 			<p id="bonus-4"><a href="https://youtu.be/ZzUsKizhb8o">Bonus</a></p>
 		</main>
 		<script>function choose_number(){function getRndInteger(minimum,maximum){return Math.floor(Math.random()*(maximum-minimum))+minimum}document.getElementById("random_number").innerHTML=getRndInteger(1,5)}</script>
