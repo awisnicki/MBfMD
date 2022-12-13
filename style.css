@@ -1,0 +1,58 @@
+:root{
+  font-family: 'Asap', sans-serif;
+  color: white;
+}
+body{
+  background: black;
+  margin: 0 auto;
+	padding: 0 1rem;
+	max-width: 100%;
+	overflow-x: hidden;
+  width: calc(100vw - 1rem);
+  height: 100vh;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem
+}
+main{
+  text-align: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+p{
+  text-align: left;
+  max-width: calc(50vw - 1rem);
+}
+details{
+  border: 1px solid;
+  outline: 2px dotted;
+  margin: 1rem 0;
+  width: calc(33vw - 1rem);
+  height: calc(33vh - 1rem);
+  padding: 1rem;
+  position: relative;
+}
+summary{
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -30%);
+}
+#random_number{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate (-50%, -50%);
+}
+ol{
+  display: inline-block;
+  text-align: left;
+}
+
+
+
