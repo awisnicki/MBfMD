@@ -6,8 +6,7 @@
 		<meta name="description" content="A box with magical properties."/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta name="robots" content="noindex, nofollow"/>
-		<meta name="theme-color" content="#"/>
-		<link rel="preload" as="style" href="style.css?=newVers_001" onload="this.rel='stylesheet'"/>
+		<meta name="theme-color" content="#000000"/>
 		<link rel="preconnect" href="https://fonts.googleapis.com"/>
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
 		<link href="https://fonts.googleapis.com/css2?family=Asap&display=swap" rel="stylesheet">
@@ -22,8 +21,8 @@
 				padding: 0 1rem;
 				max-width: 100%;
 				overflow-x: hidden;
+				overflow-y: scroll;
 				width: calc(100vw - 1rem);
-				height: 100vh;
 				display: -webkit-flex;
 				display: flex;
 				justify-content: center;
@@ -70,17 +69,27 @@
 			::marker{ 
 				display:none; 
 			}
-			summary:hover,
-			summary:focus{
+			summary:hover{
 				color: black;
 				background: white;
-				outline: none;
+			}
+			summary:focus{
+				outline: 1px dotted;
 			}
 			#random_number{
+				font-size: 1.3rem;
+				border: 1px solid;
+				width: 2rem;
+				height: 2rem;
+				border-radius: 50%;
+				display: -webkit-flex;
+				display: flex;
+				justify-content: center;
+				align-items: center;
 				position: absolute;
 				top: 50%;
 				left: 50%;
-				transform: translate (-50%, -50%);
+				transform: translate(-50%, -50%);
 			}
 			ol{
 				display: inline-block;
@@ -95,7 +104,7 @@
 	<body>
 		<main>		
 			<h1>Your Magic Box</h1>
-			<p><em>POV: You are a superhero. Open the magic box to boost one of your superpowers. Only the first boost per day is valid.</em></p>
+			<p>POV: You are a superhero. Open the magic box to boost one of your superpowers. Only the first boost per day is valid.</p>
 			<details onclick="choose_number()">
 				<summary>Click to open & close the box</summary>
 				<p id="random_number"></p>
