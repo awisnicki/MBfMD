@@ -38,6 +38,11 @@
 				justify-content: center;
 				align-items: center;
 			}
+			p,
+			summary, 
+			ol{
+				font-size: 1rem;
+			}
 			p{
 				text-align: left;
 				line-height: 1.7em;
@@ -55,6 +60,8 @@
 			summary{
 				list-style: none;
 				text-decoration: underline;
+				white-space: nowrap;
+				padding: .25rem;
 				position: absolute;
 				left: 50%;
 				top: 30%;
@@ -62,6 +69,12 @@
 			}
 			::marker{ 
 				display:none; 
+			}
+			summary:hover,
+			summary:focus{
+				color: black;
+				background: white;
+				outline: none;
 			}
 			#random_number{
 				position: absolute;
@@ -84,7 +97,7 @@
 			<h1>Your Magic Box</h1>
 			<p><em>POV: You are a superhero. Open the magic box to boost one of your superpowers. Only the first boost per day is valid.</em></p>
 			<details onclick="choose_number()">
-				<summary>Click to open the box</summary>
+				<summary>Click to open & close the box</summary>
 				<p id="random_number"></p>
 			</details>
 			<ol>
