@@ -27,7 +27,8 @@
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				gap: 1rem
+				gap: 1rem;
+				position: relative;
 			}
 			main{
 				text-align: center;
@@ -42,7 +43,31 @@
 			ol{
 				font-size: 1rem;
 			}
-			p{
+			a,
+			a:visited{
+				color: white;
+				text-decoration: none;
+			}
+			#bonus-1,
+			#bonus-2,
+			#bonus-3,
+			#bonus-4{
+				padding: .25rem;
+				border: 1px solid;
+			}
+			#bonus-1{
+				font-size: 1.1rem;
+				position: absolute;
+				top: .5rem;
+				left: 1rem;
+			}
+			#bonus-2{
+				font-size: 1.1rem;
+				position: absolute;
+				top: .5rem;
+				right: 1rem;
+			}
+			#pov{
 				text-align: left;
 				line-height: 1.7em;
 				max-width: calc(40vw - 1rem);
@@ -69,10 +94,13 @@
 			::marker{ 
 				display:none; 
 			}
+			a:hover,
+			a:visited,
 			summary:hover{
 				color: black;
 				background: white;
 			}
+			a:focus,
 			summary:focus{
 				outline: 1px dotted;
 			}
@@ -98,13 +126,26 @@
 			li{
 				margin-bottom: .5rem;
 			}
+			#bonus-3{
+				font-size: 1.1rem;
+				position: absolute;
+				bottom: .5rem;
+				left: 1rem;
+			}
+			#bonus-4{
+				font-size: 1.1rem;
+				position: absolute;
+				bottom: .5rem;
+				right: 1rem;
+			}
 		</style>
 	</head>
 
 	<body>
 		<main>		
 			<h1>Your Magic Box</h1>
-			<p>POV: You are a superhero. Open the magic box to boost one of your superpowers. Only the first boost per day is valid.</p>
+			<p id="bonus-1"><a href="https://www.youtube.com/watch?v=ZzUsKizhb8o&list=PL_vkVwrwck3NJ9ajMQv7Y-DfX9gVAk5in">Bonus</a></p>
+			<p id="pov">POV: You are a superhero. Open the magic box to boost one of your superpowers. Only the first boost per day is valid.</p>
 			<details onclick="choose_number()">
 				<summary>Click to open & close the box</summary>
 				<p id="random_number"></p>
@@ -115,6 +156,8 @@
 				<li>Intelligence</li>
 				<li>Thoughtfulness</li>
 			</ol>
+			<p id="bonus-3">Handcoded by AW</p>
+			<p id="bonus-4"><a href="https://archive.org/details/masterhumphreysc02dickrich/page/n5/mode/2up">Bonus</a></p>
 		</main>
 		<script>function choose_number(){function getRndInteger(minimum,maximum){return Math.floor(Math.random()*(maximum-minimum))+minimum}document.getElementById("random_number").innerHTML=getRndInteger(1,5)}</script>
 	</body>
