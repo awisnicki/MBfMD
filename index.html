@@ -2,42 +2,98 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8"/>
-		<title></title>
-		<meta name="description" content="."/>
+		<title>Your Magic Box</title>
+		<meta name="description" content="A box with magical properties."/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta name="robots" content="noindex, nofollow"/>
 		<meta name="theme-color" content="#"/>
-		<!-- <link rel="apple-touch-icon" sizes="180x180" href=""/>
-		<link rel="icon" type="image/png" sizes="32x32" href=""/>
-		<link rel="icon" type="image/png" sizes="16x16" href=""/>
-		<link rel="manifest" href=""/> -->
 		<link rel="preload" as="style" href="style.css?=newVers_001" onload="this.rel='stylesheet'"/>
-		<!-- <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-		<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" referrerpolicy="no-referrer"/> -->
 		<link rel="preconnect" href="https://fonts.googleapis.com"/>
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+		<link href="https://fonts.googleapis.com/css2?family=Asap&display=swap" rel="stylesheet">
+		<style>
+			:root{
+				font-family: 'Asap', sans-serif;
+				color: white;
+			}
+			body{
+				background: black;
+				margin: 0 auto;
+				padding: 0 1rem;
+				max-width: 100%;
+				overflow-x: hidden;
+				width: calc(100vw - 1rem);
+				height: 100vh;
+				display: -webkit-flex;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 1rem
+			}
+			main{
+				text-align: center;
+				display: -webkit-flex;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			p{
+				text-align: left;
+				line-height: 1.7em;
+				max-width: calc(40vw - 1rem);
+			}
+			details{
+				border: 1px solid;
+				outline: 2px dotted;
+				margin: 1rem 0;
+				width: calc(33vw - 1rem);
+				height: calc(33vh - 1rem);
+				padding: 1rem;
+				position: relative;
+			}
+			summary{
+				list-style: none;
+				text-decoration: underline;
+				position: absolute;
+				left: 50%;
+				top: 30%;
+				transform: translate(-50%, -30%);
+			}
+			::marker{ 
+				display:none; 
+			}
+			#random_number{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate (-50%, -50%);
+			}
+			ol{
+				display: inline-block;
+				text-align: left;
+			}
+			li{
+				margin-bottom: .5rem;
+			}
+		</style>
 	</head>
 
 	<body>
 		<main>		
-			<h1>Lorem ipsum dolor</h1>
-			<p><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet tellus quis arcu ultricies. </em>
+			<h1>Your Magic Box</h1>
+			<p><em>POV: You are a superhero. Open the magic box to boost one of your superpowers. Only the first boost per day is valid.</em></p>
 			<details onclick="choose_number()">
-				<summary>Open</summary>
+				<summary>Click to open the box</summary>
 				<p id="random_number"></p>
 			</details>
 			<ol>
-				<li>text</li>
-				<li>text</li>
-				<li>text</li>
-				<li>text</li>
+				<li>Overall boost</li>
+				<li>Creativity</li>
+				<li>Intelligence</li>
+				<li>Thoughtfulness</li>
 			</ol>
 		</main>
-	
-		<link href="https://fonts.googleapis.com/css2?family=Asap&display=swap" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="style.css?=newVers_0020"/>
-		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/> -->
-		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 		<script>function choose_number(){function getRndInteger(minimum,maximum){return Math.floor(Math.random()*(maximum-minimum))+minimum}document.getElementById("random_number").innerHTML=getRndInteger(1,5)}</script>
 	</body>
 </html>
