@@ -15,6 +15,13 @@
 				font-family: 'Asap', sans-serif;
 				color: white;
 			}
+			body,
+			main{
+				display: -webkit-flex;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
 			body{
 				background: black;
 				margin: 0 auto;
@@ -22,20 +29,12 @@
 				max-width: 100%;
 				overflow-x: hidden;
 				overflow-y: scroll;
-				display: -webkit-flex;
-				display: flex;
-				justify-content: center;
-				align-items: center;
 				gap: 1rem;
 				position: relative;
 			}
 			main{
 				text-align: center;
-				display: -webkit-flex;
-				display: flex;
 				flex-direction: column;
-				justify-content: center;
-				align-items: center;
 			}
 			h1{
 				margin-top: 6rem;
@@ -52,21 +51,22 @@
 			}
 			#bonus-1,
 			#bonus-2,
+			#bonus-3,
+			#bonus-4{
+				position: absolute;
+			}
+			#bonus-1,
+			#bonus-2,
 			#bonus-4{
 				font-size: 1.2rem;
 				padding: .25rem;
 				border: 1px solid;
 			}
-			#bonus-3{
-				padding: .25rem;
-			}
 			#bonus-1{
-				position: absolute;
 				top: .5rem;
 				left: 1rem;
 			}
 			#bonus-2{
-				position: absolute;
 				top: .5rem;
 				right: 1rem;
 			}
@@ -79,6 +79,18 @@
 				position: absolute;
 				top: 2.5rem;
 				right: 1rem;	
+			}
+			#bonus-3{
+				padding: .25rem;
+				bottom: .5rem;
+				left: 1rem;
+			}
+			#bonus-3 a{
+				border: none;
+			}
+			#bonus-4{
+				bottom: .5rem;
+				right: 1rem;
 			}
 			#pov{
 				text-align: left;
@@ -151,19 +163,6 @@
 			}
 			li{
 				margin-bottom: .5rem;
-			}
-			#bonus-3{
-				position: absolute;
-				bottom: .5rem;
-				left: 1rem;
-			}
-			#bonus-3 a{
-				border: none;
-			}
-			#bonus-4{
-				position: absolute;
-				bottom: .5rem;
-				right: 1rem;
 			}
 		</style>
 	</head>
