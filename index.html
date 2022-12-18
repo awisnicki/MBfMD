@@ -53,6 +53,7 @@
 			#bonus-1,
 			#bonus-2,
 			#bonus-4{
+				font-size: 1.2rem;
 				padding: .25rem;
 				border: 1px solid;
 			}
@@ -69,19 +70,41 @@
 				top: .5rem;
 				right: 1rem;
 			}
+			#bonus-2 img{
+				height: 1.5rem;
+				width: auto;
+			}
+			#bonus-2 span{
+				font-size: 1rem;
+				position: absolute;
+				top: 2.5rem;
+				right: 1rem;	
+			}
 			#pov{
 				text-align: left;
 				line-height: 1.7em;
-				max-width: 80%
+				width: 75%;
+				max-width: 900px;
 			}
+			@media only screen and (min-width: 992px){
+				#pov{
+					width: 65%;
+				}
 			details{
 				border: 1px solid;
 				outline: 2px dotted;
 				margin: 1rem 0;
 				width: 75%;
+				max-width: 900px;
 				height: calc(33vh - 1rem);
+				min-height: 10rem;
 				padding: 1rem;
 				position: relative;
+			}
+			@media only screen and (min-width: 992px){
+				details{
+					width: 65%;
+				}
 			}
 			summary{
 				list-style: none;
@@ -149,8 +172,8 @@
 		<main>		
 			<h1>Your Magic Box</h1>
 			<p id="bonus-1"><a href="https://archive.org/details/masterhumphreysc02dickrich/page/n5/mode/2up">Bonus</a></p>
-			<p id="pov">POV: You are a superhero. Open the magic box to boost one of your superpowers. Only the first boost per day is valid.</p>
-			<p id="bonus-2"><a href=""></a>Bonus</p>
+			<p id="pov">POV: You are a superhero. Open the magic box to boost one of your superpowers. Only the first boost per day is valid. Click the "bonus" boxes in the corners for extra adventures.</p>
+			<p id="bonus-2"><img src="bavs.png" /><span>Free Stop</span></p>
 			<details onclick="choose_number()">
 				<summary>Click to open & close the box</summary>
 				<p id="random_number"></p>
@@ -158,12 +181,14 @@
 			<ol>
 				<li>Overall boost</li>
 				<li>Creativity</li>
+				<li>Dickens interpretation</li>
 				<li>Intelligence</li>
 				<li>Thoughtfulness</li>
+				<li>You choose</li>
 			</ol>
 			<p id="bonus-3"><em>handcoded by aw</em></p>
 			<p id="bonus-4"><a href="https://youtu.be/ZzUsKizhb8o">Bonus</a></p>
 		</main>
-		<script>function choose_number(){function getRndInteger(minimum,maximum){return Math.floor(Math.random()*(maximum-minimum))+minimum}document.getElementById("random_number").innerHTML=getRndInteger(1,5)}</script>
+		<script>function choose_number(){function getRndInteger(minimum,maximum){return Math.floor(Math.random()*(maximum-minimum))+minimum}document.getElementById("random_number").innerHTML=getRndInteger(1,7)}</script>
 	</body>
 </html>
